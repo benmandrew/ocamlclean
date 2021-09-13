@@ -75,8 +75,8 @@ try
   let (code, data) = Globalise.globalise_closures code data in
   print_done ();
   print_msg "Cleaning environments... ";
-  let (code, data) = Cleanenvs.clean_environments code data in
-  print_done ();
+  (* let (code, data) = Cleanenvs.clean_environments code data in
+  print_done (); *)
   print_msg "Cleaning code:\n";
   let (code, data) = compress_loop code prim data in
   print_msg "Cleaning primitives... ";
